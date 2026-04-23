@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("")
+@RequestMapping("/data")
 @CrossOrigin("http://localhost:5173")
 class BackendController {
   private CourseService _courseService;
