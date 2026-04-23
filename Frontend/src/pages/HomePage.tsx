@@ -1,3 +1,5 @@
+import "../css/HomePage.css"
+
 export function HomePage({ courses }: { courses: any[] }) {
 
   return (
@@ -7,11 +9,13 @@ export function HomePage({ courses }: { courses: any[] }) {
       {courses.length === 0 ? (
         <h3>No courses added! Add a course to get started</h3>
       ) : (
-        <ul>
+        <div className="grid grid-cols-3 grid-rows-3 gap-4">
           {courses.map(course => (
-            <li key={course.courseId}>{course.courseName}</li>
+            <div key={course.courseId}>
+              <p>{course.courseName}</p>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   )
