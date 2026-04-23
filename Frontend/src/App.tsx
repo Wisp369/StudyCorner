@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes } from 'react-router'
 import './App.css'
 import { Route } from 'react-router'
-import { HomePage } from './components/HomePage'
+import { HomePage } from './pages/HomePage'
 import { useEffect, useState } from 'react'
 
 function App() {
