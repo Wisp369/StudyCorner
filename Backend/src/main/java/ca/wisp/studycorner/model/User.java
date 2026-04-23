@@ -1,9 +1,16 @@
 package ca.wisp.studycorner.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class User {
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Integer _id;
 
   private String _username;
   private String _password;
@@ -17,27 +24,31 @@ public class User {
     this._email = email;
   }
 
-  public String get_username() {
+  public Integer getId() {
+    return _id;
+  }
+
+  public String getUsername() {
     return _username;
   }
 
-  public void set_username(String username) {
+  public void setUsername(String username) {
     this._username = username;
   }
 
-  public String get_password() {
+  public String getPassword() {
     return _password;
   }
 
-  public void set_password(String password) {
+  public void setPassword(String password) {
     this._password = password;
   }
 
-  public String get_email() {
+  public String getEmail() {
     return _email;
   }
 
-  public void set_email(String email) {
+  public void setEmail(String email) {
     this._email = email;
   }
 }
