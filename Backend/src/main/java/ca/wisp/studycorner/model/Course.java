@@ -22,35 +22,35 @@ public class Course {
 
   public Course() {}
 
-  public Integer get_courseId() {
+  public Integer getCourseId() {
     return _courseId;
   }
 
-  public void set_courseId(Integer courseId) {
+  public void setCourseId(Integer courseId) {
     this._courseId = courseId;
   }
 
-  public String get_courseName() {
+  public String getCourseName() {
     return _courseName;
   }
 
-  public void set_courseName(String courseName) {
+  public void setCourseName(String courseName) {
     this._courseName = courseName;
   }
 
-  public String get_courseCode() {
+  public String getCourseCode() {
     return _courseCode;
   }
 
-  public void set_courseCode(String courseCode) {
+  public void setCourseCode(String courseCode) {
     this._courseCode = courseCode;
   }
 
-  public String get_professorName() {
+  public String getProfessorName() {
     return _professorName;
   }
 
-  public void set_professorName(String professorName) {
+  public void setProfessorName(String professorName) {
     this._professorName = professorName;
   }
 }
