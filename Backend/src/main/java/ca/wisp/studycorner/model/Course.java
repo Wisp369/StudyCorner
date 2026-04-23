@@ -20,6 +20,8 @@ public class Course {
     this.courseName = courseName;
   }
 
+  public Course() {}
+
   public Integer getCourseId() {
     return courseId;
   }
