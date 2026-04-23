@@ -10,47 +10,47 @@ public class Course {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private Integer courseId;
+  private Integer _courseId;
 
-  private String courseName;
-  private String courseCode;
-  private String professorName;
+  private String _courseName;
+  private String _courseCode;
+  private String _professorName;
 
   public Course(String courseName) {
-    this.courseName = courseName;
+    this._courseName = courseName;
   }
 
   public Course() {}
 
-  public Integer getCourseId() {
-    return courseId;
+  public Integer get_courseId() {
+    return _courseId;
   }
 
-  public void setCourseId(Integer courseId) {
-    this.courseId = courseId;
+  public void set_courseId(Integer courseId) {
+    this._courseId = courseId;
   }
 
-  public String getCourseName() {
-    return courseName;
+  public String get_courseName() {
+    return _courseName;
   }
 
-  public void setCourseName(String courseName) {
-    this.courseName = courseName;
+  public void set_courseName(String courseName) {
+    this._courseName = courseName;
   }
 
-  public String getCourseCode() {
-    return courseCode;
+  public String get_courseCode() {
+    return _courseCode;
   }
 
-  public void setCourseCode(String courseCode) {
-    this.courseCode = courseCode;
+  public void set_courseCode(String courseCode) {
+    this._courseCode = courseCode;
   }
 
-  public String getProfessorName() {
-    return professorName;
+  public String get_professorName() {
+    return _professorName;
   }
 
-  public void setProfessorName(String professorName) {
-    this.professorName = professorName;
+  public void set_professorName(String professorName) {
+    this._professorName = professorName;
   }
 }

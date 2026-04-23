@@ -5,39 +5,39 @@ import jakarta.persistence.Entity;
 @Entity
 public class User {
 
-  private String username;
-  private String password;
-  private String email;
+  private String _username;
+  private String _password;
+  private String _email;
 
   public User() {}
 
   public User(String username, String password, String email) {
-    this.username = username;
-    this.password = password;
-    this.email = email;
+    this._username = username;
+    this._password = password;
+    this._email = email;
   }
 
-  public String getUsername() {
-    return username;
+  public String get_username() {
+    return _username;
   }
 
-  public void setUsername(String username) {
-    this.username = username;
+  public void set_username(String username) {
+    this._username = username;
   }
 
-  public String getPassword() {
-    return password;
+  public String get_password() {
+    return _password;
   }
 
-  public void setPassword(String password) {
-    this.password = password;
+  public void set_password(String password) {
+    this._password = password;
   }
 
-  public String getEmail() {
-    return email;
+  public String get_email() {
+    return _email;
   }
 
-  public void setEmail(String email) {
-    this.email = email;
+  public void set_email(String email) {
+    this._email = email;
   }
 }
