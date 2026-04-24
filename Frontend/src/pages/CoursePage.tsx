@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router"
 import type { Course } from "../types/Course"
+import { CoursePageHeader } from "../components/CoursePageHeader"
 
 export function CoursePage() {
   const { courseId } = useParams()
@@ -20,9 +21,7 @@ export function CoursePage() {
     )
   } else {
     return (
-      <div>
-        <h1>{course.courseName}</h1>
-      </div>
+      <CoursePageHeader course={course} />
     )
   }
 }
