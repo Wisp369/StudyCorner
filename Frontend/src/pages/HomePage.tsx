@@ -4,7 +4,7 @@ import "../css/HomePage.css"
 export function HomePage({ courses }: { courses: any[] }) {
 
   return (
-    <div>
+    <div className="home-page">
       <h1>Home Page</h1>
 
       {courses.length === 0 ? (

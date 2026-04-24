@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.home-page {
+  padding: 0px 10px;
+}
