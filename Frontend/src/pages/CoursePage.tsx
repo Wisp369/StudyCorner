@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router"
+import type { Course } from "../types/Course"
 
 export function CoursePage() {
   const { courseId } = useParams()
-  const [course, setCourse] = useState(null)
+  const [course, setCourse] = useState<Course>()
 
   useEffect(() => {
     fetch("http://localhost:8080/data/courses/" + courseId)
@@ -11,7 +12,7 @@ export function CoursePage() {
       .then(data => setCourse(data))
   }, [])
 
-  if (course === null) {
+  if (course === undefined) {
     return (
       <div>
         <p>Loading...</p>
