@@ -10,11 +10,10 @@ public class User {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private Integer _id;
+  private String _email;
 
   private String _username;
   private String _password;
-  private String _email;
 
   public User() {}
 
@@ -22,10 +21,6 @@ public class User {
     this._username = username;
     this._password = password;
     this._email = email;
-  }
-
-  public Integer getId() {
-    return _id;
   }
 
   public String getUsername() {

@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 class BackendController {
   private CourseService _courseService;
 
-  public BackendController() {
-    _courseService = new CourseService();
+  public BackendController(CourseService courseService) {
+    _courseService = courseService;
   }
 
   @GetMapping("/courses")
