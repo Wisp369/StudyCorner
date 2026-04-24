@@ -3,6 +3,7 @@ import './App.css'
 import { Route } from 'react-router'
 import { HomePage } from './pages/HomePage'
 import { useEffect, useState } from 'react'
+import { CoursePage } from './pages/CoursePage'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage courses={courses} />} />
+        <Route path="/courses/:courseId" element={<CoursePage />} />
       </Routes>
     </BrowserRouter>
   )
