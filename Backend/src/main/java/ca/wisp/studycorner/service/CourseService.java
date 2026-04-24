@@ -22,6 +22,10 @@ public class CourseService {
     return _courseRepo.findAll();
   }
 
+  public Optional<Course> getCourseById(Integer id) {
+    return _courseRepo.findById(id);
+  }
+
   public void addCourse(Course course) {
     _courseRepo.save(course);
   }
