@@ -1,0 +1,19 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid gray;
+}
+
+#app-center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.app-header-button {
+  background-color: rebeccapurple;
+  border-radius: 10px;
+}
