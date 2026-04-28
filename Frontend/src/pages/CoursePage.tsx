@@ -22,7 +22,7 @@ export function CoursePage() {
   } else {
     return (
       <div>
-        <AppHeader headerText={course.courseName} />
+        <AppHeader headerText={course.courseName} isCoursePage={true} />
       </div>
     )
   }

@@ -4,6 +4,7 @@ import { Route } from 'react-router'
 import { HomePage } from './pages/HomePage'
 import { useEffect, useState } from 'react'
 import { CoursePage } from './pages/CoursePage'
+import { AddCoursePage } from './pages/AddCoursePage'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage courses={courses} />} />
         <Route path="/courses/:courseId" element={<CoursePage />} />
+        <Route path="/addCourse" element={<AddCoursePage />} />
       </Routes>
     </BrowserRouter>
   )

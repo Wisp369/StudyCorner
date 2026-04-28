@@ -1,15 +1,25 @@
 import "../css/AppHeader.css";
+import { HeaderTitle } from "./HeaderTitle";
 
-export function AppHeader({ headerText }: { headerText?: string }) {
+export function AppHeader({ headerText, isCoursePage }: { headerText?: string, isCoursePage: boolean }) {
 
-  return (
-    <div className="app-header flex">
-      <div id="app-center-content">
-        <p className="app-header-text">{headerText}</p>
+  if (isCoursePage) {
+    return (
+      <div className="app-header flex">
+        <HeaderTitle headerText={headerText ? headerText : ""} />
+        <nav>
+          <a href="/" className="hover:text-slate-700">Home</a>
+        </nav>
+      </div >
+    )
+  } else {
+    return (
+      <div className="app-header flex">
+        <HeaderTitle headerText={headerText ? headerText : ""} />
+        <nav>
+          <a href="/addCourse" className="hover:text-slate-700">Add Course</a>
+        </nav>
       </div>
-      <nav>
-        <a href="/" className="hover:text-slate-700">Home</a>
-      </nav>
-    </div >
-  )
+    )
+  }
 }

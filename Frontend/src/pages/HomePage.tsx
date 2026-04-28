@@ -1,3 +1,4 @@
+import { AppHeader } from "../components/AppHeader"
 import { CourseButton } from "../components/CourseButton"
 import "../css/HomePage.css"
 
@@ -5,7 +6,7 @@ export function HomePage({ courses }: { courses: any[] }) {
 
   return (
     <div className="home-page">
-      <h1>Home Page</h1>
+      <AppHeader headerText="My Courses" isCoursePage={false} />
 
       {courses.length === 0 ? (
         <h3>No courses added! Add a course to get started</h3>
