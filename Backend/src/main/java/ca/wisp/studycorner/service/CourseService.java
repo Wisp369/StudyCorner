@@ -26,8 +26,9 @@ public class CourseService {
     return _courseRepo.findById(id);
   }
 
-  public void addCourse(Course course) {
+  public Course addCourse(Course course) {
     _courseRepo.save(course);
+    return course;
   }
 
   // TODO: Create a new exception class and throw it when the user is not found
