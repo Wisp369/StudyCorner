@@ -1,16 +1,12 @@
 package ca.wisp.studycorner.model;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class User {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  private String _email;
+  @Id private String _email;
 
   private String _username;
   private String _password;

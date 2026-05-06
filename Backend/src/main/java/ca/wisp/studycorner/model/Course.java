@@ -1,5 +1,6 @@
 package ca.wisp.studycorner.model;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,8 +17,10 @@ public class Course {
   private String _courseCode;
   private String _professorName;
 
-  public Course(String courseName) {
+  public Course(String courseName, String courseCode, String professorName) {
     this._courseName = courseName;
+    this._courseCode = courseCode;
+    this._professorName = professorName;
   }
 
   public Course() {}
