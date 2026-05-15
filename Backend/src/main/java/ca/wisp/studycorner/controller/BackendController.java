@@ -45,7 +45,7 @@ class BackendController {
     }
   }
 
-  @PostMapping("/addCourse")
+  @PostMapping("/courses")
   public ResponseEntity<?> addCourse(@RequestBody Course course) {
     Course newCourse = _courseService.addCourse(course);
     return new ResponseEntity<>(newCourse, HttpStatus.CREATED);
