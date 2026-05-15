@@ -31,6 +31,10 @@ public class CourseService {
     return course;
   }
 
+  public void deleteCourse(Integer id) {
+    _courseRepo.deleteById(id);
+  }
+
   // TODO: Create a new exception class and throw it when the user is not found
   public Optional<User> getUserByEmail(String email) {
     return _userRepo.findById(email);

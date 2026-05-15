@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -49,5 +50,16 @@ class BackendController {
   public ResponseEntity<?> addCourse(@RequestBody Course course) {
     Course newCourse = _courseService.addCourse(course);
     return new ResponseEntity<>(newCourse, HttpStatus.CREATED);
+  }
+
+  @DeleteMapping("/deleteCourse/{id}")
+  public ResponseEntity<?> deleteCourse(@PathVariable Integer id) {
+    try {
+      _courseService.deleteCourse(id);
+      return ResponseEntity.status(HttpStatus.OK)
+          .body("Course with id: " + id + " was deleted successfully");
+    } catch (Exception e) {
+      throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getLocalizedMessage());
+    }
   }
 }
