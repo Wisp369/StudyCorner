@@ -31,7 +31,7 @@ class BackendController {
   }
 
   @GetMapping("/courses/{id}")
-  public ResponseEntity<?> getCourseById(@PathVariable Integer id) throws Exception {
+  public ResponseEntity<?> getCourseById(@PathVariable Integer id) throws ResponseStatusException {
 
     try {
       var course = _courseService.getCourseById(id);
@@ -41,7 +41,7 @@ class BackendController {
       } else {
         return new ResponseEntity<>(course.get(), HttpStatus.OK);
       }
-    } catch (Exception e) {
+    } catch (ResponseStatusException e) {
       throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getLocalizedMessage());
     }
   }
@@ -53,12 +53,12 @@ class BackendController {
   }
 
   @DeleteMapping("/deleteCourse/{id}")
-  public ResponseEntity<?> deleteCourse(@PathVariable Integer id) {
+  public ResponseEntity<?> deleteCourse(@PathVariable Integer id) throws ResponseStatusException {
     try {
       _courseService.deleteCourse(id);
       return ResponseEntity.status(HttpStatus.OK)
           .body("Course with id: " + id + " was deleted successfully");
-    } catch (Exception e) {
+    } catch (ResponseStatusException e) {
       throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getLocalizedMessage());
     }
   }
