@@ -13,6 +13,12 @@ export function CoursePageHeader({ courseName, courseId, onDeleteCourse }: Cours
 
   return (
     <div className="app-header flex">
+      <button
+        className="hover:text-slate-700"
+        onClick={() => {
+          navigate("/")
+        }}
+      > Home </button>
       <HeaderTitle headerText={courseName} />
       <button
         className="hover:text-slate-700"
@@ -25,6 +31,7 @@ export function CoursePageHeader({ courseName, courseId, onDeleteCourse }: Cours
       >
         Delete Course
       </button>
+
     </div>
   )
 }

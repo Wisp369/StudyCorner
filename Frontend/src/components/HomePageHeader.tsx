@@ -5,8 +5,8 @@ export function HomePageHeader() {
 
   return (
     <div className="app-header flex">
+      <p className="app-header-text">Study Corner</p>
       <HeaderTitle headerText={"Home"} />
-      <h2 className="app-header-text">Study Corner</h2>
       <nav>
         <a href="/addCourse" className="hover:text-slate-700">Add Course</a>
       </nav>
