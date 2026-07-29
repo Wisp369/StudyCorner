@@ -1,4 +1,4 @@
-import { AppHeader } from "../components/AppHeader"
+import { HomePageHeader } from "../components/HomePageHeader"
 import { CourseButton } from "../components/CourseButton"
 import "../css/HomePage.css"
 import { HomeViewModel } from "../viewModels/HomeViewModel"
@@ -9,7 +9,7 @@ export function HomePage() {
 
   return (
     <div className="home-page">
-      <AppHeader headerText="My Courses" isCoursePage={false} />
+      <HomePageHeader />
 
       {courses.length === 0 ? (
         <h3>No courses added! Add a course to get started</h3>

@@ -1,4 +1,4 @@
-import "../css/AppHeader.css"
+import "../css/CourseHeader.css"
 
 export function HeaderTitle({ headerText }: { headerText: string }) {
   return (
