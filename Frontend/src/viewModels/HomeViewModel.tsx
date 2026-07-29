@@ -9,7 +9,18 @@ export const HomeViewModel = () => {
       .catch(error => console.error("Error fetching courses:", error))
   }, [])
 
+  const deleteCourse = (courseId: number) => {
+    fetch("http://localhost:8080/deleteCourse/" + courseId, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(courseId)
+    })
+  }
+
   return {
-    courses
+    courses,
+    deleteCourse
   }
 }
