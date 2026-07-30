@@ -32,7 +32,12 @@ public class CourseService {
   }
 
   public void deleteCourse(Integer id) {
-    _courseRepo.deleteById(id);
+    Optional<Course> course = getCourseById(id);
+    if (course == null) {
+      throw new IllegalArgumentException("The course with the id: " + id + " could not be found");
+    } else {
+      _courseRepo.delete(course.get());
+    }
   }
 
   // TODO: Create a new exception class and throw it when the user is not found
