@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+.text-input {
+  border: 1px solid #3c3a3a;
+  padding: 5px;
+  margin: 15px;
+}
+
+input {
+  border: 1px solid #3c3a3a;
+  justify-content: center;
+  justify-self: center;
+}
+
+input input::placeholder {
+  text-align: center;
+}
+
+/*
+TODO: Make this gradient border work for the input field when it is focused.
+input:focus {
+  border: 1px solid transparent;
+  border-image: linear-gradient(to bottom, #7d45a8, #b865c5);
+  border-image-slice: 1;
+  outline: none;
+}
+*/
