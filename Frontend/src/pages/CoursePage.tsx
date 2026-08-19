@@ -2,10 +2,10 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router"
 import { CoursePageHeader } from "../components/CoursePageHeader"
 import type { Course } from "../types/Course"
-import { HomeViewModel } from "../viewModels/HomeViewModel"
+import { CoursePageViewModel } from "../viewModels/CoursePageViewModel"
 
 export function CoursePage() {
-  const viewModel = HomeViewModel()
+  const viewModel = CoursePageViewModel()
   const { courseId } = useParams()
   const [course, setCourse] = useState<Course>()
 
