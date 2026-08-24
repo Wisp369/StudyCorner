@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./ColourVariables.css";
 
 .home-page {
   padding: 0px 10px;
@@ -8,7 +9,7 @@
   align-items: center;
 }
 .vertical-divider {
-  border-left: 1px solid #e5e7eb;
+  border-left: 1px solid #3c3a3a;
   height: 100%;
   width: 1px;
   justify-self: end;

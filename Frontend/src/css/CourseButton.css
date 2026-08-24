@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./ColourVariables.css";
 
 @keyframes courseHoverAnimation {
   from {
@@ -6,12 +7,25 @@
   }
   to {
     opacity: 0.8;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-image:
+      linear-gradient(var(--course-card-bg), var(--course-card-bg)),
+      linear-gradient(
+        to bottom,
+        var(--active-border-colour-1),
+        var(--active-border-colour-2)
+      );
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
   }
 }
 
 .course-button {
   flex: 1;
-  border: 1px solid gray;
+  border: 2px solid var(--component-border);
+  background-color: var(--course-card-bg);
+  color: var(--text-primary);
   border-radius: 5px;
   align-items: center;
   justify-content: center;
@@ -20,5 +34,16 @@
 
 .course-button:hover {
   animation: courseHoverAnimation 0.2s;
+  border: 2px solid transparent;
+  border-radius: 5px;
   opacity: 0.8;
+  background-image:
+    linear-gradient(var(--course-card-bg), var(--course-card-bg)),
+    linear-gradient(
+      to bottom,
+      var(--active-border-colour-1),
+      var(--active-border-colour-2)
+    );
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }

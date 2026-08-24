@@ -1,0 +1,10 @@
+:root {
+  background: #25212f;
+  --course-card-bg: #120b12;
+  --text-primary: #d9d9d9;
+  --text-secondary: #999999;
+  --component-border: #575353;
+  --divider-color: #3c3a3a;
+  --active-border-colour-1: #7d45a8;
+  --active-border-colour-2: #b865c5;
+}
