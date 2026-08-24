@@ -5,11 +5,8 @@ export function CourseButton({ course }: { course: any }) {
   const navigation = useNavigate()
   return (
     <button onClick={() => { navigation("courses/" + course.courseId) }} className="course-button">
-      <div className="grid grid-cols-1 grid-rows-2">
-        <div className="course-button-banner bg-amber-50" />
-        <div>
-          <h2 className="course-button-title">{course.courseName}</h2>
-        </div>
+      <div className="justify-center flex flex-col items-center">
+        <h2 className="course-button-title">{course.courseName}</h2>
       </div>
     </button>
   )

@@ -3,3 +3,13 @@
 .home-page {
   padding: 0px 10px;
 }
+.home-header {
+  justify-content: space-between;
+  align-items: center;
+}
+.vertical-divider {
+  border-left: 1px solid #e5e7eb;
+  height: 100%;
+  width: 1px;
+  justify-self: end;
+}
