@@ -24,8 +24,9 @@ class BackendController {
   private CourseService _courseService;
   private AssignmentService _assignmentService;
 
-  public BackendController(CourseService courseService) {
+  public BackendController(CourseService courseService, AssignmentService assignmentService) {
     _courseService = courseService;
+    _assignmentService = assignmentService;
   }
 
   @GetMapping("/courses")

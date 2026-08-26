@@ -32,8 +32,14 @@ export function HomePage() {
         <div className="col-start-2 row-start-2 vertical-divider">
         </div>
         <div className="col-start-3 row-start-2">
-          <div className="grid grid-cols-1 grid-rows-2 gap-4 col-span-1 justify-end">
-            <p>TEst</p>
+          <div className="flex flex-col justify-end">
+            {viewModel.assignments.map(assignment => (
+              <div key={assignment.assignmentId}>
+                <p>
+                  {assignment.assignmentName} - {assignment.assignmentWeight}% - Due {new Date(assignment.dueDate).toLocaleDateString()}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
