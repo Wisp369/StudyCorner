@@ -14,10 +14,13 @@ public class Assignment {
 
   private String _assignmentName;
   private Float _assignmentWeight;
+  private Boolean _isCompleted;
   private LocalDateTime _dueDate;
 
   public Assignment(String assignmentName, float assignmentWeight, LocalDateTime dueDate) {
     this._assignmentName = assignmentName;
+    // Set the completion status to false by default
+    this._isCompleted = false;
     this._dueDate = dueDate;
   }
 
@@ -41,6 +44,14 @@ public class Assignment {
 
   public void setAssignmentWeight(Float assignmentWeight) {
     this._assignmentWeight = assignmentWeight;
+  }
+
+  public Boolean getIsCompleted() {
+    return _isCompleted;
+  }
+
+  public void setIsCompleted(Boolean isCompleted) {
+    this._isCompleted = isCompleted;
   }
 
   public LocalDateTime getDueDate() {
