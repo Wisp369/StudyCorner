@@ -1,11 +1,17 @@
 package ca.wisp.studycorner.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import java.time.LocalDateTime;
 
 @Entity
 public class Assignment {
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer _assignmentId;
+
   private String _assignmentName;
   private Float _assignmentWeight;
   private LocalDateTime _dueDate;

@@ -1,6 +1,8 @@
 package ca.wisp.studycorner.controller;
 
+import ca.wisp.studycorner.model.Assignment;
 import ca.wisp.studycorner.model.Course;
+import ca.wisp.studycorner.service.AssignmentService;
 import ca.wisp.studycorner.service.CourseService;
 import java.util.List;
 import org.springframework.http.HttpStatus;
@@ -20,6 +22,7 @@ import org.springframework.web.server.ResponseStatusException;
 @CrossOrigin("http://localhost:5173")
 class BackendController {
   private CourseService _courseService;
+  private AssignmentService _assignmentService;
 
   public BackendController(CourseService courseService) {
     _courseService = courseService;
@@ -61,5 +64,10 @@ class BackendController {
     } catch (ResponseStatusException e) {
       throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getLocalizedMessage());
     }
+  }
+
+  @GetMapping("/assignments")
+  public List<Assignment> getAssignments() {
+    return _assignmentService.getAssignments();
   }
 }
