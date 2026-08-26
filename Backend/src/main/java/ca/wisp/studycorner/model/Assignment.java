@@ -1,9 +1,12 @@
 package ca.wisp.studycorner.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import java.time.LocalDateTime;
 
 @Entity
@@ -13,6 +16,11 @@ public class Assignment {
   private Integer _assignmentId;
 
   private String _assignmentName;
+
+  @ManyToOne(optional = false, fetch = FetchType.LAZY)
+  @JoinColumn(name = "_course_id", nullable = false)
+  private Course _course;
+
   private Float _assignmentWeight;
   private Boolean _isCompleted;
   private LocalDateTime _dueDate;
@@ -36,6 +44,10 @@ public class Assignment {
 
   public void setAssignmentName(String assignmentName) {
     this._assignmentName = assignmentName;
+  }
+
+  public Course getCourse() {
+    return _course;
   }
 
   public Float getAssignmentWeight() {
