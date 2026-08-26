@@ -19,11 +19,26 @@
 }
 
 .dropdown-menu-options {
-  color: var(--text-primary);
   border: 2px solid var(--component-border);
-  background-color: var(--course-card-bg-active);
+  background-color: var(--course-card-bg);
 }
-.dropdown-menu-options:hover {
+.dropdown-menu-item {
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  color: var(--text-secondary);
+  width: 100%;
+  text-align: center;
+}
+.dropdown-menu-item:hover {
   color: var(--text-active);
   background-color: var(--course-card-bg-active);
+}
+.dropdown-menu-item:hover {
+  color: var(--text-active);
+  background-color: var(--course-card-bg-active);
+}
+
+#delete-course-button:hover {
+  background-color: #e2231d;
 }

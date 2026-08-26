@@ -8,16 +8,26 @@ type CoursePageHeaderProps = {
   courseName: string
   courseId: number
   onDeleteCourse: (courseId: number) => void
+  onAddAssignment: (courseId: number) => void
 }
 
-export function CoursePageHeader({ courseName, courseId, onDeleteCourse }: CoursePageHeaderProps) {
+export function CoursePageHeader({ courseName, courseId, onDeleteCourse, onAddAssignment }: CoursePageHeaderProps) {
   const navigate = useNavigate()
   const dropdownOptions: DropdownMenuItem[] = [
     {
-      title: "Delete Course", onClick: () => {
+      title: "Add Assignment",
+      id: "add-assignment-button",
+      onClick: () => {
+        onAddAssignment(courseId)
+      }
+    },
+    {
+      title: "Delete Course",
+      id: "delete-course-button",
+      onClick: () => {
         onDeleteCourse(courseId)
       }
-    }
+    },
   ]
 
   return (

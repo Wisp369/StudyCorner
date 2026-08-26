@@ -17,7 +17,7 @@ export function DropdownMenu({ options }: { options: DropdownMenuItem[] }) {
         {
           options.map(option => (
             <div key={option.title}>
-              <button onClick={option.onClick}>
+              <button onClick={option.onClick} className="dropdown-menu-item" id={option.id}>
                 {option.title}
               </button>
             </div>
