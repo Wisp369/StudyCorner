@@ -1,0 +1,29 @@
+@import "./ColourVariables.css";
+
+.dropdown-menu-options {
+  z-index: 1;
+  position: absolute;
+  display: none;
+  /* top | left, right | bottom margin values */
+  margin: 5px -2px 5px;
+  padding: 5px;
+  cursor: pointer;
+  align-self: center;
+  color: var(--text-secondary);
+  right: 0;
+}
+
+.dropdown-menu-options button {
+  cursor: pointer;
+  display: block;
+}
+
+.dropdown-menu-options {
+  color: var(--text-primary);
+  border: 2px solid var(--component-border);
+  background-color: var(--course-card-bg-active);
+}
+.dropdown-menu-options:hover {
+  color: var(--text-active);
+  background-color: var(--course-card-bg-active);
+}

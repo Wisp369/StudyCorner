@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router"
+
 export const CoursePageViewModel = () => {
+  const navigate = useNavigate()
 
   const deleteCourse = (courseId: number) => {
     fetch("http://localhost:8080/data/deleteCourse/" + courseId, {
@@ -8,6 +11,7 @@ export const CoursePageViewModel = () => {
       },
       body: JSON.stringify(courseId)
     })
+    navigate("/")
   }
 
   return {

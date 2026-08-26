@@ -1,19 +1,17 @@
+@import "./ColourVariables.css";
+
 .app-header {
+  position: static;
+  z-index: 0;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  border-bottom: 1px solid #3c3a3a;
+  border-bottom: 1px solid var(--component-border);
 }
 
 #header-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 10px;
-  color: #d9d9d9;
-}
-
-.app-header-button {
-  border-radius: 10px;
+  color: var(--text-primary);
 }

@@ -5,7 +5,6 @@ import { HomeViewModel } from "../viewModels/HomeViewModel"
 
 export function HomePage() {
   const viewModel = HomeViewModel()
-  var courses = viewModel.courses
 
   return (
     <div className="home-page grid grid-rows-2 justify-center">
@@ -17,7 +16,7 @@ export function HomePage() {
       <div className="row-start-2 grid grid-cols-3 gap-2 justify-center">
 
         <div className="justify-center flex-1 col-start-1 row-start-2">
-          {courses.length === 0 ? (
+          {viewModel.courses.length === 0 ? (
             <h3>No courses added! Add a course to get started</h3>
           ) : (
             <div className="grid grid-cols-3 gap-x-50 gap-y-10" id="Courses">

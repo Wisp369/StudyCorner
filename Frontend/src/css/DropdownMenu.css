@@ -1,0 +1,18 @@
+@import "./ColourVariables.css";
+.dropdown-menu {
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--course-card-bg);
+  border: 2px solid var(--component-border);
+  padding: 5px;
+}
+
+.dropdown-menu:hover .dropdown-menu-options {
+  display: block;
+}
+
+.dropdown-menu:hover {
+  opacity: 0.8;
+}
