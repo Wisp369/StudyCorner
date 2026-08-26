@@ -70,4 +70,10 @@ class BackendController {
   public List<Assignment> getAssignments() {
     return _assignmentService.getAssignments();
   }
+
+  @PostMapping("/assignments")
+  public ResponseEntity<?> addAssignment(@RequestBody Assignment assignment) {
+    Assignment newAssignment = _assignmentService.addAssignment(assignment);
+    return new ResponseEntity<>(newAssignment, HttpStatus.CREATED);
+  }
 }
