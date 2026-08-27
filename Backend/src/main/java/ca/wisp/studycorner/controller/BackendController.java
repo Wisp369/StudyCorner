@@ -72,9 +72,10 @@ class BackendController {
     return _assignmentService.getAssignments();
   }
 
-  @PostMapping("/assignments")
-  public ResponseEntity<?> addAssignment(@RequestBody Assignment assignment) {
-    Assignment newAssignment = _assignmentService.addAssignment(assignment);
+  @PostMapping("/courses/{courseId}/assignments")
+  public ResponseEntity<?> addAssignment(
+      @PathVariable Integer courseId, @RequestBody Assignment assignment) {
+    Assignment newAssignment = _assignmentService.addAssignment(assignment, courseId);
     return new ResponseEntity<>(newAssignment, HttpStatus.CREATED);
   }
 }

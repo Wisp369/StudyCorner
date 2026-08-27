@@ -21,7 +21,7 @@ public class Assignment {
   @JoinColumn(name = "_course_id", nullable = false)
   private Course _course;
 
-  private Float _assignmentWeight;
+  private double _assignmentWeight;
   private Boolean _isCompleted;
   private LocalDateTime _dueDate;
 
@@ -50,11 +50,15 @@ public class Assignment {
     return _course;
   }
 
-  public Float getAssignmentWeight() {
+  public void setCourse(Course course) {
+    this._course = course;
+  }
+
+  public Double getAssignmentWeight() {
     return _assignmentWeight;
   }
 
-  public void setAssignmentWeight(Float assignmentWeight) {
+  public void setAssignmentWeight(Double assignmentWeight) {
     this._assignmentWeight = assignmentWeight;
   }
 

@@ -29,7 +29,9 @@ public class Course {
     this._professorName = professorName;
   }
 
-  public Course() {}
+  public Course() {
+    this._assignments = new ArrayList<Assignment>();
+  }
 
   public Integer getCourseId() {
     return _courseId;
