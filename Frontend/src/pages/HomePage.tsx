@@ -17,7 +17,7 @@ export function HomePage() {
 
         <div className="justify-center flex-1 col-start-1 row-start-2">
           {viewModel.courses.length === 0 ? (
-            <h3>No courses added! Add a course to get started</h3>
+            <h3 className="justify-center col-span-3 col-start-2">No courses added! Add a course to get started</h3>
           ) : (
             <div className="grid grid-cols-3 gap-x-50 gap-y-10" id="Courses">
               {viewModel.courses.map(course => (

@@ -14,7 +14,12 @@ export const CoursePageViewModel = () => {
     navigate("/")
   }
 
+  const addAssignment = (courseId: number) => {
+    navigate("/addAssignment/" + courseId)
+  }
+
   return {
-    deleteCourse
+    deleteCourse,
+    addAssignment
   }
 }

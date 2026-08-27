@@ -23,12 +23,21 @@ export function CoursePage() {
     )
   }
 
+  if (course.courseId === undefined) {
+    return (
+      <div>
+        <p>Course ID unavailable...</p>
+      </div>
+    )
+  }
+
   return (
     <div>
       <CoursePageHeader
         courseName={course.courseName}
         courseId={course.courseId}
         onDeleteCourse={viewModel.deleteCourse}
+        onAddAssignment={viewModel.addAssignment}
       />
     </div>
   )
