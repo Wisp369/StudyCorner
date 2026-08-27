@@ -1,11 +1,11 @@
 import "../css/TextInput.css"
 
-export function TextInput({ label, value, onChange }: { label: string, value: string, onChange: (e: any) => void }) {
+export function TextInput({ label, value, type, onChange }: { label: string, value: string, type: string, onChange: (e: any) => void }) {
 
   return (
     <div className="text-input-container">
       <input
-        type="text"
+        type={type}
         placeholder={label}
         id="textInput"
         value={value}
