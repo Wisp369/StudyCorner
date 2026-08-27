@@ -1,5 +1,6 @@
 package ca.wisp.studycorner.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,6 +16,7 @@ public class Course {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer _courseId;
 
+  @JsonManagedReference
   @OneToMany(mappedBy = "_course")
   private List<Assignment> _assignments;
 

@@ -1,5 +1,7 @@
 package ca.wisp.studycorner.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -17,6 +19,7 @@ public class Assignment {
 
   private String _assignmentName;
 
+  @JsonBackReference
   @ManyToOne(optional = false, fetch = FetchType.LAZY)
   @JoinColumn(name = "_course_id", nullable = false)
   private Course _course;
@@ -46,10 +49,12 @@ public class Assignment {
     this._assignmentName = assignmentName;
   }
 
+  @JsonIgnore
   public Course getCourse() {
     return _course;
   }
 
+  @JsonIgnore
   public void setCourse(Course course) {
     this._course = course;
   }
