@@ -1,20 +1,16 @@
 package ca.wisp.studycorner.service;
 
 import ca.wisp.studycorner.data.CourseRepository;
-import ca.wisp.studycorner.data.UserRepository;
 import ca.wisp.studycorner.model.Course;
-import ca.wisp.studycorner.model.User;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CourseService {
-  private UserRepository _userRepo;
   private CourseRepository _courseRepo;
 
-  public CourseService(UserRepository userRepo, CourseRepository courseRepo) {
-    _userRepo = userRepo;
+  public CourseService(CourseRepository courseRepo) {
     _courseRepo = courseRepo;
   }
 
@@ -38,10 +34,5 @@ public class CourseService {
     } else {
       _courseRepo.delete(course.get());
     }
-  }
-
-  // TODO: Create a new exception class and throw it when the user is not found
-  public Optional<User> getUserByEmail(String email) {
-    return _userRepo.findById(email);
   }
 }
