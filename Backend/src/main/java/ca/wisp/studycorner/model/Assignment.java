@@ -28,11 +28,14 @@ public class Assignment {
   private Boolean _isCompleted;
   private LocalDateTime _dueDate;
 
-  public Assignment(String assignmentName, float assignmentWeight, LocalDateTime dueDate) {
+  public Assignment(
+      String assignmentName, double assignmentWeight, LocalDateTime dueDate, Course course) {
     this._assignmentName = assignmentName;
+    this._assignmentWeight = assignmentWeight;
     // Set the completion status to false by default
     this._isCompleted = false;
     this._dueDate = dueDate;
+    this._course = course;
   }
 
   public Assignment() {}
