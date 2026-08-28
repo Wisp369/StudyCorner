@@ -9,8 +9,25 @@
   align-items: center;
 }
 .vertical-divider {
-  border-left: 1px solid #3c3a3a;
+  border-left: 1px solid var(--divider-color);
   height: 100%;
   width: 1px;
   justify-self: end;
+}
+
+.assignment-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--text-secondary);
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+.assignment-item h3 {
+  color: var(--text-primary);
+  font-weight: bold;
 }

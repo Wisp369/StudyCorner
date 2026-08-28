@@ -34,9 +34,11 @@ export function HomePage() {
         <div className="col-start-3 row-start-2">
           <div className="flex flex-col justify-end">
             {viewModel.assignments.map(assignment => (
-              <div key={assignment.assignmentId}>
+              <div key={assignment.assignmentId} className="assignment-item">
+                {/* TODO: Add time to due date */}
+                <h3>{new Date(assignment.dueDate).toLocaleDateString()} - TIME</h3>
                 <p>
-                  {assignment.assignmentName} - {assignment.assignmentWeight}% - Due {new Date(assignment.dueDate).toLocaleDateString()}
+                  {assignment.courseId}: {assignment.assignmentName} ({assignment.assignmentWeight}%) Due
                 </p>
               </div>
             ))}
